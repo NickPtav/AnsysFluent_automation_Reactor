@@ -152,7 +152,6 @@ for i in range(n_samples):
     solver.tui.solve.initialize.compute_defaults.velocity_inlet()
     solver.solution.initialization.standard_initialize()
 
-    breakpoint()
     # Set UDF thermal boundary condition
     solver.tui.define.user_defined.function_hooks("surface-reaction-rate", '"RXN_ARRHENIUS::libudf"')
     wall_bc = solver.settings.setup.boundary_conditions.wall["reactive_wall"]
